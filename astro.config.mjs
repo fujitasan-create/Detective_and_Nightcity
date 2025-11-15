@@ -4,6 +4,7 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://fujitasan-create.github.io/Detective_and_Nightcity/',
+  base: '/Detective_and_Nightcity/',
 
   integrations: [
     tailwind(),

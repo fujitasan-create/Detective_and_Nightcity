@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const BASE_URL = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout
@@ -7,7 +9,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   description="探偵と夜の街の公式ホームページです。捜査パートとADVパートで展開されるミステリーゲーム。"
   keywords={['探偵', '夜の街', 'ゲーム', 'ミステリー', 'ADV', '捜査']}
 >
-  <main class="min-h-screen text-gray-900 overflow-x-hidden" style="background-image: url('/背景レンガ.png'); background-repeat: repeat;">
+  <main class="min-h-screen text-gray-900 overflow-x-hidden" style={`background-image: url('${BASE_URL}background-brick.png'); background-repeat: repeat;`}>
     <!-- ヘッダー -->
     <header class="fixed top-0 left-0 right-0 backdrop-blur-sm z-50 shadow-lg" style="background-color: rgba(245, 206, 171, 0.95);">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -37,7 +39,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </nav>
       </div>
       <!-- モバイルメニュー -->
-      <div id="mobile-menu" class="hidden md:hidden border-t" style="background-image: url('/背景レンガ.png'); background-repeat: repeat; border-color: rgb(240, 185, 140);">
+      <div id="mobile-menu" class="hidden md:hidden border-t" style={`background-image: url('${BASE_URL}background-brick.png'); background-repeat: repeat; border-color: rgb(240, 185, 140);`}>
         <div class="px-4 py-4 space-y-3">
           <a href="#story" class="block text-gray-700 hover:text-gray-900 transition">あらすじ</a>
           <a href="#pv" class="block text-gray-700 hover:text-gray-900 transition">PV</a>
@@ -54,18 +56,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <section
       id="top"
       class="pb-0 md:pb-10 relative overflow-hidden bg-cover bg-center bg-no-repeat"
-      style="background-image: url('/タイトル画面①.png');"
+      style={`background-image: url('${BASE_URL}title-screen-1.png');`}
     >
       <!-- 背景レンガ（スマホのみ） -->
       <div 
         class="md:hidden absolute inset-0"
-        style="background-image: url('/背景レンガ.png'); background-repeat: repeat; background-size: auto; z-index: 0;"
+        style={`background-image: url('${BASE_URL}background-brick.png'); background-repeat: repeat; background-size: auto; z-index: 0;`}
       ></div>
       
       <!-- タイトル画像②（スマホのみ） -->
       <div 
         class="md:hidden relative w-full"
-        style="min-height: 60vh; background-image: url('/タイトル画面②.png'); background-size: contain; background-position: center center; background-repeat: no-repeat; z-index: 1;"
+        style={`min-height: 60vh; background-image: url('${BASE_URL}title-screen-2.png'); background-size: contain; background-position: center center; background-repeat: no-repeat; z-index: 1;`}
       ></div>
       
       <!-- デスクトップタイトル画面 -->
@@ -81,7 +83,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <!-- ロゴ（右上に配置、タイトル画面②の上に重ねて） -->
       <div class="absolute top-20 right-3 md:top-28 md:right-8 z-20 max-w-[35vw] md:max-w-[50vw]">
         <img
-          src="/ロゴ①.png"
+          src={`${BASE_URL}logo-1.png`}
           alt="探偵と夜の街"
           class="w-full max-w-[250px] sm:max-w-[280px] md:max-w-[550px] lg:max-w-[700px] h-auto drop-shadow-2xl"
           style="transform: scaleX(1.15);"
@@ -91,7 +93,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </section>
 
     <!-- あらすじセクション -->
-    <section id="story" class="pt-0 md:pt-12 pb-20" style="background-image: url('/背景レンガ.png'); background-repeat: repeat;">
+    <section id="story" class="pt-0 md:pt-12 pb-20" style={`background-image: url('${BASE_URL}background-brick.png'); background-repeat: repeat;`}>
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12 px-4">
           <h2 class="font-bold mb-4 text-gray-900 text-3xl sm:text-4xl md:text-6xl lg:text-7xl">～あらすじ～</h2>
@@ -99,7 +101,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="px-4">
           <div 
             class="relative rounded-lg shadow-2xl min-h-[400px] sm:min-h-[500px] md:min-h-[600px] bg-cover bg-center bg-no-repeat flex items-center justify-center"
-            style="background-image: url('/大きめのボックス.png'); background-color: rgb(253, 247, 242); padding: 80px 60px 80px 60px;"
+            style={`background-image: url('${BASE_URL}large-box.png'); background-color: rgb(253, 247, 242); padding: 80px 60px 80px 60px;`}
           >
           <div class="relative z-10 max-w-[90%] mx-auto w-full">
             <p class="text-center text-gray-800 text-xs sm:text-sm md:text-lg lg:text-xl leading-relaxed">
@@ -118,14 +120,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </section>
 
     <!-- PVセクション -->
-    <section id="pv" class="py-20" style="background-image: url('/背景レンガ.png'); background-repeat: repeat;">
+    <section id="pv" class="py-20" style={`background-image: url('${BASE_URL}background-brick.png'); background-repeat: repeat;`}>
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12 px-4">
           <h2 class="font-bold mb-4 text-gray-900 text-3xl sm:text-4xl md:text-6xl lg:text-7xl">～プロモーションビデオ～</h2>
           <p class="text-gray-700 text-base sm:text-lg">PVは後日公開予定です</p>
         </div>
-        <div class="rounded-lg overflow-hidden shadow-xl" style="background-image: url('/背景レンガ.png'); background-repeat: repeat;">
-          <div class="aspect-video flex items-center justify-center relative" style="background-image: url('/背景レンガ.png'); background-repeat: repeat;">
+        <div class="rounded-lg overflow-hidden shadow-xl" style={`background-image: url('${BASE_URL}background-brick.png'); background-repeat: repeat;`}>
+          <div class="aspect-video flex items-center justify-center relative" style={`background-image: url('${BASE_URL}background-brick.png'); background-repeat: repeat;`}>
             <!-- 動画が配置されていない場合のプレースホルダー -->
             <div class="text-center text-gray-600">
               <svg class="w-24 h-24 mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20">
@@ -139,9 +141,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <video
               class="w-full h-full object-cover"
               controls
-              poster="/pv-poster.jpg"
+              poster={`${BASE_URL}pv-poster.jpg`}
             >
-              <source src="/pv.mp4" type="video/mp4" />
+              <source src={`${BASE_URL}pv.mp4`} type="video/mp4" />
               お使いのブラウザは動画タグをサポートしていません。
             </video>
             -->
@@ -151,7 +153,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </section>
 
     <!-- ゲームパートセクション -->
-    <section id="gameplay" class="py-20" style="background-image: url('/背景レンガ.png'); background-repeat: repeat;">
+    <section id="gameplay" class="py-20" style={`background-image: url('${BASE_URL}background-brick.png'); background-repeat: repeat;`}>
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12 px-4">
           <h2 class="font-bold mb-4 text-gray-900 text-3xl sm:text-4xl md:text-6xl lg:text-7xl">～ゲームパート～</h2>
@@ -159,7 +161,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 px-4">
           <div class="relative rounded-lg shadow-xl mx-auto w-full">
             <img
-              src="/小さめのボックス①.png"
+              src={`${BASE_URL}small-box-1.png`}
               alt="捜査パート"
               class="w-full h-auto rounded-lg"
             />
@@ -176,7 +178,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
           <div class="relative rounded-lg shadow-xl mx-auto w-full">
             <img
-              src="/小さめのボックス①.png"
+              src={`${BASE_URL}small-box-1.png`}
               alt="ADVパート"
               class="w-full h-auto rounded-lg"
             />
@@ -196,7 +198,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </section>
 
     <!-- エンディングセクション -->
-    <section id="ending" class="py-20" style="background-image: url('/背景レンガ.png'); background-repeat: repeat;">
+    <section id="ending" class="py-20" style={`background-image: url('${BASE_URL}background-brick.png'); background-repeat: repeat;`}>
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12 px-4">
           <h2 class="font-bold mb-4 text-gray-900 text-3xl sm:text-4xl md:text-6xl lg:text-7xl">～エンディング～</h2>
@@ -205,7 +207,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6 px-4">
           <div class="relative rounded-lg shadow-lg mx-auto" style="max-width: 100%;">
             <img
-              src="/小さめのボックス①.png"
+              src={`${BASE_URL}small-box-1.png`}
               alt="BadEnd"
               class="w-full h-auto rounded-lg"
             />
@@ -218,7 +220,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
           <div class="relative rounded-lg shadow-lg mx-auto w-full">
             <img
-              src="/小さめのボックス①.png"
+              src={`${BASE_URL}small-box-1.png`}
               alt="NormalEnd"
               class="w-full h-auto rounded-lg"
             />
@@ -231,7 +233,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
           <div class="relative rounded-lg shadow-lg mx-auto w-full">
             <img
-              src="/小さめのボックス①.png"
+              src={`${BASE_URL}small-box-1.png`}
               alt="HappyEnd"
               class="w-full h-auto rounded-lg"
             />
@@ -244,7 +246,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
           <div class="relative rounded-lg shadow-lg mx-auto w-full">
             <img
-              src="/小さめのボックス①.png"
+              src={`${BASE_URL}small-box-1.png`}
               alt="TrueEnd"
               class="w-full h-auto rounded-lg"
             />
@@ -257,7 +259,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
           <div class="relative rounded-lg shadow-lg mx-auto w-full">
             <img
-              src="/小さめのボックス①.png"
+              src={`${BASE_URL}small-box-1.png`}
               alt="AnotherEnd"
               class="w-full h-auto rounded-lg"
             />
@@ -273,7 +275,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </section>
 
     <!-- キャラ紹介セクション -->
-    <section id="character" class="py-20" style="background-image: url('/背景レンガ.png'); background-repeat: repeat;">
+    <section id="character" class="py-20" style={`background-image: url('${BASE_URL}background-brick.png'); background-repeat: repeat;`}>
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12 px-4">
           <h2 class="font-bold mb-4 text-gray-900 text-3xl sm:text-4xl md:text-6xl lg:text-7xl">～キャラ紹介～</h2>
@@ -282,7 +284,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <!-- 赤坂リン -->
           <div class="relative rounded-lg shadow-xl mx-auto w-full">
             <img
-              src="/キャラクター紹介左.png"
+              src={`${BASE_URL}character-intro-left.png`}
               alt="赤坂リン"
               class="w-full h-auto rounded-lg"
             />
@@ -290,7 +292,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               <!-- キャラクター画像エリア（上部） -->
               <div class="flex-[2] flex items-center justify-center overflow-hidden" style="padding: 30px 25px 10px 25px;">
                 <img
-                  src="/characters/刑事イメージ①.png"
+                  src={`${BASE_URL}characters/detective-officer-image-1.png`}
                   alt="赤坂リン"
                   class="w-full h-full object-contain"
                   style="max-width: 100%; max-height: 100%; object-position: center;"
@@ -309,7 +311,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <!-- ヘーゼル -->
           <div class="relative rounded-lg shadow-xl mx-auto w-full">
             <img
-              src="/キャラクター紹介右.png"
+              src={`${BASE_URL}character-intro-right.png`}
               alt="ヘーゼル"
               class="w-full h-auto rounded-lg"
             />
@@ -317,7 +319,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               <!-- キャラクター画像エリア（上部） -->
               <div class="flex-[2] flex items-center justify-center overflow-hidden" style="padding: 30px 25px 10px 25px;">
                 <img
-                  src="/characters/探偵イメージ①.png"
+                  src={`${BASE_URL}characters/detective-character-image-1.png`}
                   alt="ヘーゼル"
                   class="w-full h-full object-contain"
                   style="max-width: 100%; max-height: 100%; object-position: center;"
@@ -338,14 +340,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </section>
 
     <!-- リリースノートセクション -->
-    <section id="release" class="py-20" style="background-image: url('/背景レンガ.png'); background-repeat: repeat;">
+    <section id="release" class="py-20" style={`background-image: url('${BASE_URL}background-brick.png'); background-repeat: repeat;`}>
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12 px-4">
           <h2 class="font-bold mb-4 text-gray-900 text-3xl sm:text-4xl md:text-6xl lg:text-7xl">～リリースノート～</h2>
         </div>
         <div class="relative rounded-lg shadow-xl mx-auto max-w-3xl px-4">
           <img
-            src="/大きめのボックス.png"
+            src={`${BASE_URL}large-box.png`}
             alt="リリースノート"
             class="w-full h-auto rounded-lg"
           />
@@ -365,7 +367,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </section>
 
     <!-- 概要セクション -->
-    <section id="info" class="py-20" style="background-image: url('/背景レンガ.png'); background-repeat: repeat;">
+    <section id="info" class="py-20" style={`background-image: url('${BASE_URL}background-brick.png'); background-repeat: repeat;`}>
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12 px-4">
           <h2 class="font-bold mb-4 text-gray-900 text-3xl sm:text-4xl md:text-6xl lg:text-7xl">～概要～</h2>
@@ -373,7 +375,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="px-4">
           <div 
             class="relative rounded-lg shadow-2xl min-h-[500px] sm:min-h-[600px] bg-cover bg-center bg-no-repeat flex items-center justify-center"
-            style="background-image: url('/大きめのボックス.png'); background-color: rgb(253, 247, 242); padding: 80px 70px 80px 70px;"
+            style={`background-image: url('${BASE_URL}large-box.png'); background-color: rgb(253, 247, 242); padding: 80px 70px 80px 70px;`}
           >
             <div class="relative z-10 max-w-[80%] mx-auto w-full">
               <dl class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 md:gap-8 lg:gap-10 justify-items-center items-center">
@@ -409,7 +411,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </section>
 
     <!-- フッター（SNSリンク） -->
-    <footer class="py-12 border-t" style="background-image: url('/背景レンガ.png'); background-repeat: repeat; border-color: rgb(240, 185, 140);">
+    <footer class="py-12 border-t" style={`background-image: url('${BASE_URL}background-brick.png'); background-repeat: repeat; border-color: rgb(240, 185, 140);`}>
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
           <h3 class="text-2xl font-bold mb-6 text-gray-900">探偵と夜の街</h3>

@@ -11,6 +11,8 @@ interface Props {
   canonical?: string;
 }
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 const {
   title,
   description,
@@ -53,7 +55,7 @@ const schema = {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href={`${BASE_URL}favicon.svg`} />
     <meta name="generator" content={Astro.generator} />
 
     <!-- Primary Meta Tags -->
@@ -91,7 +93,7 @@ const schema = {
     <link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@400;500;700&display=swap" rel="stylesheet" />
 
     <!-- Custom Font CSS (for self-hosted fonts) -->
-    <link rel="stylesheet" href="/fonts/kaisei-opti.css" />
+    <link rel="stylesheet" href={`${BASE_URL}fonts/kaisei-opti.css`} />
 
     <slot name="head" />
   </head>

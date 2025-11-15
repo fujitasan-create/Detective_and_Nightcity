@@ -2,9 +2,9 @@ import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 
-// https://astro.build/config
 export default defineConfig({
-  site: 'https://example.com', // 実際のドメインに変更してください
+  site: 'https://fujitasan-create.github.io/Detective_and_Nightcity/',
+
   integrations: [
     tailwind(),
     sitemap({

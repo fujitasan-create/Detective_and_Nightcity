@@ -1,0 +1,30 @@
+/* Kaisei Opti Font - Self-hosted version */
+/* フォントファイルをダウンロードした場合は、このCSSを使用してください */
+
+@font-face {
+  font-family: 'Kaisei Opti';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./kaisei-opti-regular.woff2') format('woff2'),
+       url('./kaisei-opti-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Kaisei Opti';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('./kaisei-opti-medium.woff2') format('woff2'),
+       url('./kaisei-opti-medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Kaisei Opti';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./kaisei-opti-bold.woff2') format('woff2'),
+       url('./kaisei-opti-bold.woff') format('woff');
+}
+

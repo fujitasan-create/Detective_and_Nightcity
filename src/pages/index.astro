@@ -1,0 +1,492 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="探偵と夜の街 | ホームページ"
+  description="探偵と夜の街の公式ホームページです。捜査パートとADVパートで展開されるミステリーゲーム。"
+  keywords={['探偵', '夜の街', 'ゲーム', 'ミステリー', 'ADV', '捜査']}
+>
+  <main class="min-h-screen text-gray-900 overflow-x-hidden" style="background-image: url('/背景レンガ.png'); background-repeat: repeat;">
+    <!-- ヘッダー -->
+    <header class="fixed top-0 left-0 right-0 backdrop-blur-sm z-50 shadow-lg" style="background-color: rgba(245, 206, 171, 0.95);">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <nav class="flex items-center justify-between">
+          <div class="flex items-center">
+            <a href="#top" class="text-2xl font-bold text-gray-900 hover:text-gray-700 transition">
+              探偵と夜の街
+            </a>
+          </div>
+          <div class="hidden md:flex space-x-6">
+            <a href="#story" class="text-gray-700 hover:text-gray-900 transition">あらすじ</a>
+            <a href="#pv" class="text-gray-700 hover:text-gray-900 transition">PV</a>
+            <a href="#gameplay" class="text-gray-700 hover:text-gray-900 transition">ゲームパート</a>
+            <a href="#ending" class="text-gray-700 hover:text-gray-900 transition">エンディング</a>
+            <a href="#character" class="text-gray-700 hover:text-gray-900 transition">キャラ紹介</a>
+            <a href="#release" class="text-gray-700 hover:text-gray-900 transition">リリースノート</a>
+            <a href="#info" class="text-gray-700 hover:text-gray-900 transition">概要</a>
+          </div>
+          <!-- モバイルメニュー -->
+          <div class="md:hidden">
+            <button id="mobile-menu-button" class="text-gray-900">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </nav>
+      </div>
+      <!-- モバイルメニュー -->
+      <div id="mobile-menu" class="hidden md:hidden border-t" style="background-image: url('/背景レンガ.png'); background-repeat: repeat; border-color: rgb(240, 185, 140);">
+        <div class="px-4 py-4 space-y-3">
+          <a href="#story" class="block text-gray-700 hover:text-gray-900 transition">あらすじ</a>
+          <a href="#pv" class="block text-gray-700 hover:text-gray-900 transition">PV</a>
+          <a href="#gameplay" class="block text-gray-700 hover:text-gray-900 transition">ゲームパート</a>
+          <a href="#ending" class="block text-gray-700 hover:text-gray-900 transition">エンディング</a>
+          <a href="#character" class="block text-gray-700 hover:text-gray-900 transition">キャラ紹介</a>
+          <a href="#release" class="block text-gray-700 hover:text-gray-900 transition">リリースノート</a>
+          <a href="#info" class="block text-gray-700 hover:text-gray-900 transition">概要</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- タイトルセクション -->
+    <section
+      id="top"
+      class="pb-0 md:pb-10 relative overflow-hidden bg-cover bg-center bg-no-repeat"
+      style="background-image: url('/タイトル画面①.png');"
+    >
+      <!-- 背景レンガ（スマホのみ） -->
+      <div 
+        class="md:hidden absolute inset-0"
+        style="background-image: url('/背景レンガ.png'); background-repeat: repeat; background-size: auto; z-index: 0;"
+      ></div>
+      
+      <!-- タイトル画像②（スマホのみ） -->
+      <div 
+        class="md:hidden relative w-full"
+        style="min-height: 60vh; background-image: url('/タイトル画面②.png'); background-size: contain; background-position: center center; background-repeat: no-repeat; z-index: 1;"
+      ></div>
+      
+      <!-- デスクトップタイトル画面 -->
+      <div 
+        class="hidden md:flex md:items-center md:justify-center"
+        style="min-height: 100vh;"
+      >
+      </div>
+      
+      <!-- オーバーレイ（デスクトップのみ） -->
+      <div class="hidden md:block absolute inset-0 bg-black/40 z-10"></div>
+      
+      <!-- ロゴ（右上に配置、タイトル画面②の上に重ねて） -->
+      <div class="absolute top-20 right-3 md:top-28 md:right-8 z-20 max-w-[35vw] md:max-w-[50vw]">
+        <img
+          src="/ロゴ①.png"
+          alt="探偵と夜の街"
+          class="w-full max-w-[250px] sm:max-w-[280px] md:max-w-[550px] lg:max-w-[700px] h-auto drop-shadow-2xl"
+          style="transform: scaleX(1.15);"
+        />
+      </div>
+
+    </section>
+
+    <!-- あらすじセクション -->
+    <section id="story" class="pt-0 md:pt-12 pb-20" style="background-image: url('/背景レンガ.png'); background-repeat: repeat;">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 px-4">
+          <h2 class="font-bold mb-4 text-gray-900 text-3xl sm:text-4xl md:text-6xl lg:text-7xl">～あらすじ～</h2>
+        </div>
+        <div class="px-4">
+          <div 
+            class="relative rounded-lg shadow-2xl min-h-[400px] sm:min-h-[500px] md:min-h-[600px] bg-cover bg-center bg-no-repeat flex items-center justify-center"
+            style="background-image: url('/大きめのボックス.png'); background-color: rgb(253, 247, 242); padding: 80px 60px 80px 60px;"
+          >
+          <div class="relative z-10 max-w-[90%] mx-auto w-full">
+            <p class="text-center text-gray-800 text-xs sm:text-sm md:text-lg lg:text-xl leading-relaxed">
+              眠らない街・歌舞伎町の住人が、次々と命を奪われる不可解な事件が起こる。
+              <br /><br />
+              現場へ駆けつけた新人刑事・赤坂リンは、その場に居合わせた学生探偵・ヘーゼルと出会う。性格も立場も異なる二人は、奇妙な縁で同じ事件を追うことに。
+              <br /><br />
+              彼女らは風俗、キャバクラ、ホストクラブ——欲望が渦巻く夜の街で、手がかりを求め奔走する。
+              <br /><br />
+              やがて夜の街の闇が、徐々に姿を見せ始める——。
+            </p>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PVセクション -->
+    <section id="pv" class="py-20" style="background-image: url('/背景レンガ.png'); background-repeat: repeat;">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 px-4">
+          <h2 class="font-bold mb-4 text-gray-900 text-3xl sm:text-4xl md:text-6xl lg:text-7xl">～プロモーションビデオ～</h2>
+          <p class="text-gray-700 text-base sm:text-lg">PVは後日公開予定です</p>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-xl" style="background-image: url('/背景レンガ.png'); background-repeat: repeat;">
+          <div class="aspect-video flex items-center justify-center relative" style="background-image: url('/背景レンガ.png'); background-repeat: repeat;">
+            <!-- 動画が配置されていない場合のプレースホルダー -->
+            <div class="text-center text-gray-600">
+              <svg class="w-24 h-24 mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
+              </svg>
+              <p class="text-xl">PV準備中</p>
+              <p class="text-sm mt-2">動画ファイル</p>
+            </div>
+            <!-- 動画タグ（後で動画を配置したら表示されます） -->
+            <!-- 
+            <video
+              class="w-full h-full object-cover"
+              controls
+              poster="/pv-poster.jpg"
+            >
+              <source src="/pv.mp4" type="video/mp4" />
+              お使いのブラウザは動画タグをサポートしていません。
+            </video>
+            -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ゲームパートセクション -->
+    <section id="gameplay" class="py-20" style="background-image: url('/背景レンガ.png'); background-repeat: repeat;">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 px-4">
+          <h2 class="font-bold mb-4 text-gray-900 text-3xl sm:text-4xl md:text-6xl lg:text-7xl">～ゲームパート～</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 px-4">
+          <div class="relative rounded-lg shadow-xl mx-auto w-full">
+            <img
+              src="/小さめのボックス①.png"
+              alt="捜査パート"
+              class="w-full h-auto rounded-lg"
+            />
+            <div class="absolute inset-0 flex items-center justify-center p-10 md:p-12 lg:p-16">
+              <div class="relative z-10 text-center max-w-[85%] md:max-w-[80%]">
+                <h3 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4 md:mb-5 text-gray-900">捜査パート</h3>
+                <p class="text-gray-800 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">
+                  プレイヤーは実際に現場を調査し、残された痕跡や証拠品を吟味しながら、少しずつ真相へと迫っていきます。
+                  部屋の中に隠れた異変、キャラクターが残した些細な情報、整理された証拠の矛盾…。
+                  気づいたことを積み重ねることで、事件の"見えなかった輪郭"が徐々に浮かび上がっていきます。
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="relative rounded-lg shadow-xl mx-auto w-full">
+            <img
+              src="/小さめのボックス①.png"
+              alt="ADVパート"
+              class="w-full h-auto rounded-lg"
+            />
+            <div class="absolute inset-0 flex items-center justify-center p-10 md:p-12 lg:p-16">
+              <div class="relative z-10 text-center max-w-[85%] md:max-w-[80%]">
+                <h3 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4 md:mb-5 text-gray-900">ADVパート</h3>
+                <p class="text-gray-800 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">
+                  個性豊かなキャラクターたちとの会話や交流を通して物語を進めていくパートです。
+                  プレイヤーの選ぶ言葉や態度によって、登場人物の反応や信頼関係が微妙に変化し、
+                  その積み重ねがやがてストーリー分岐やエンディングへと影響を及ぼします。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- エンディングセクション -->
+    <section id="ending" class="py-20" style="background-image: url('/背景レンガ.png'); background-repeat: repeat;">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 px-4">
+          <h2 class="font-bold mb-4 text-gray-900 text-3xl sm:text-4xl md:text-6xl lg:text-7xl">～エンディング～</h2>
+          <p class="text-gray-700 text-base sm:text-lg">プレイヤーの選択により、複数のエンディングが存在します</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6 px-4">
+          <div class="relative rounded-lg shadow-lg mx-auto" style="max-width: 100%;">
+            <img
+              src="/小さめのボックス①.png"
+              alt="BadEnd"
+              class="w-full h-auto rounded-lg"
+            />
+            <div class="absolute inset-0 flex items-center justify-center" style="padding: 30px 25px 30px 25px;">
+              <div class="relative z-10 text-center max-w-[90%]">
+                <h3 class="text-base sm:text-lg md:text-xl font-bold mb-2 text-gray-900">BadEnd</h3>
+                <p class="text-gray-700 text-xs sm:text-sm">選択を誤った先の悲劇</p>
+              </div>
+            </div>
+          </div>
+          <div class="relative rounded-lg shadow-lg mx-auto w-full">
+            <img
+              src="/小さめのボックス①.png"
+              alt="NormalEnd"
+              class="w-full h-auto rounded-lg"
+            />
+            <div class="absolute inset-0 flex items-center justify-center" style="padding: 30px 25px 30px 25px;">
+              <div class="relative z-10 text-center max-w-[90%]">
+                <h3 class="text-base sm:text-lg md:text-xl font-bold mb-2 text-gray-900">NormalEnd</h3>
+                <p class="text-gray-700 text-xs sm:text-sm">事件解決、<br />しかし残る違和感</p>
+              </div>
+            </div>
+          </div>
+          <div class="relative rounded-lg shadow-lg mx-auto w-full">
+            <img
+              src="/小さめのボックス①.png"
+              alt="HappyEnd"
+              class="w-full h-auto rounded-lg"
+            />
+            <div class="absolute inset-0 flex items-center justify-center" style="padding: 30px 25px 30px 25px;">
+              <div class="relative z-10 text-center max-w-[90%]">
+                <h3 class="text-base sm:text-lg md:text-xl font-bold mb-2 text-gray-900">HappyEnd</h3>
+                <p class="text-gray-700 text-xs sm:text-sm">救われる未来</p>
+              </div>
+            </div>
+          </div>
+          <div class="relative rounded-lg shadow-lg mx-auto w-full">
+            <img
+              src="/小さめのボックス①.png"
+              alt="TrueEnd"
+              class="w-full h-auto rounded-lg"
+            />
+            <div class="absolute inset-0 flex items-center justify-center" style="padding: 30px 25px 30px 25px;">
+              <div class="relative z-10 text-center max-w-[90%]">
+                <h3 class="text-base sm:text-lg md:text-xl font-bold mb-2 text-gray-900">TrueEnd</h3>
+                <p class="text-gray-700 text-xs sm:text-sm">すべての謎が繋がる<br />唯一の真実</p>
+              </div>
+            </div>
+          </div>
+          <div class="relative rounded-lg shadow-lg mx-auto w-full">
+            <img
+              src="/小さめのボックス①.png"
+              alt="AnotherEnd"
+              class="w-full h-auto rounded-lg"
+            />
+            <div class="absolute inset-0 flex items-center justify-center" style="padding: 30px 25px 30px 25px;">
+              <div class="relative z-10 text-center max-w-[90%]">
+                <h3 class="text-base sm:text-lg md:text-xl font-bold mb-2 text-gray-900">AnotherEnd</h3>
+                <p class="text-gray-700 text-xs sm:text-sm">条件次第で開く<br />隠しルート</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- キャラ紹介セクション -->
+    <section id="character" class="py-20" style="background-image: url('/背景レンガ.png'); background-repeat: repeat;">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 px-4">
+          <h2 class="font-bold mb-4 text-gray-900 text-3xl sm:text-4xl md:text-6xl lg:text-7xl">～キャラ紹介～</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 px-4">
+          <!-- 赤坂リン -->
+          <div class="relative rounded-lg shadow-xl mx-auto w-full">
+            <img
+              src="/キャラクター紹介左.png"
+              alt="赤坂リン"
+              class="w-full h-auto rounded-lg"
+            />
+            <div class="absolute inset-0 flex flex-col">
+              <!-- キャラクター画像エリア（上部） -->
+              <div class="flex-[2] flex items-center justify-center overflow-hidden" style="padding: 30px 25px 10px 25px;">
+                <img
+                  src="/characters/刑事イメージ①.png"
+                  alt="赤坂リン"
+                  class="w-full h-full object-contain"
+                  style="max-width: 100%; max-height: 100%; object-position: center;"
+                  onerror="this.style.display='none';"
+                />
+              </div>
+              <!-- テキストエリア（下部） -->
+              <div class="flex-1 flex flex-col items-center justify-start text-center" style="padding-top: 8px; padding-left: 30px; padding-right: 30px; padding-bottom: 30px;">
+                <h3 class="text-lg sm:text-xl md:text-2xl font-bold mb-2 text-gray-900">赤坂リン</h3>
+                <p class="text-gray-800 text-sm sm:text-base">
+                  正義感の強い新米女刑事。
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- ヘーゼル -->
+          <div class="relative rounded-lg shadow-xl mx-auto w-full">
+            <img
+              src="/キャラクター紹介右.png"
+              alt="ヘーゼル"
+              class="w-full h-auto rounded-lg"
+            />
+            <div class="absolute inset-0 flex flex-col">
+              <!-- キャラクター画像エリア（上部） -->
+              <div class="flex-[2] flex items-center justify-center overflow-hidden" style="padding: 30px 25px 10px 25px;">
+                <img
+                  src="/characters/探偵イメージ①.png"
+                  alt="ヘーゼル"
+                  class="w-full h-full object-contain"
+                  style="max-width: 100%; max-height: 100%; object-position: center;"
+                  onerror="this.style.display='none';"
+                />
+              </div>
+              <!-- テキストエリア（下部） -->
+              <div class="flex-1 flex flex-col items-center justify-start text-center" style="padding-top: 8px; padding-left: 30px; padding-right: 30px; padding-bottom: 30px;">
+                <h3 class="text-lg sm:text-xl md:text-2xl font-bold mb-2 text-gray-900">ヘーゼル</h3>
+                <p class="text-gray-800 text-sm sm:text-base">
+                  IQ160の天才探偵。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- リリースノートセクション -->
+    <section id="release" class="py-20" style="background-image: url('/背景レンガ.png'); background-repeat: repeat;">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 px-4">
+          <h2 class="font-bold mb-4 text-gray-900 text-3xl sm:text-4xl md:text-6xl lg:text-7xl">～リリースノート～</h2>
+        </div>
+        <div class="relative rounded-lg shadow-xl mx-auto max-w-3xl px-4">
+          <img
+            src="/大きめのボックス.png"
+            alt="リリースノート"
+            class="w-full h-auto rounded-lg"
+          />
+          <div class="absolute inset-0 flex items-center justify-center" style="padding: 40px 35px 40px 35px;">
+            <div class="relative z-10 text-center max-w-[90%]">
+              <div class="flex items-center justify-center gap-2 sm:gap-4 mb-4 flex-wrap">
+                <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-gray-900">バージョン 0.0.0</h3>
+                <span class="text-gray-700 text-sm sm:text-base md:text-lg">2026/01/01</span>
+              </div>
+              <ul class="list-disc list-inside text-gray-800 text-sm sm:text-base md:text-lg lg:text-xl space-y-2 text-left inline-block">
+                <li>初回リリース予定</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 概要セクション -->
+    <section id="info" class="py-20" style="background-image: url('/背景レンガ.png'); background-repeat: repeat;">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 px-4">
+          <h2 class="font-bold mb-4 text-gray-900 text-3xl sm:text-4xl md:text-6xl lg:text-7xl">～概要～</h2>
+        </div>
+        <div class="px-4">
+          <div 
+            class="relative rounded-lg shadow-2xl min-h-[500px] sm:min-h-[600px] bg-cover bg-center bg-no-repeat flex items-center justify-center"
+            style="background-image: url('/大きめのボックス.png'); background-color: rgb(253, 247, 242); padding: 80px 70px 80px 70px;"
+          >
+            <div class="relative z-10 max-w-[80%] mx-auto w-full">
+              <dl class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 md:gap-8 lg:gap-10 justify-items-center items-center">
+                <div class="text-center">
+                  <dt class="text-sm sm:text-base md:text-xl lg:text-2xl font-semibold mb-2 sm:mb-3 text-gray-900">ジャンル</dt>
+                  <dd class="text-gray-800 text-xs sm:text-sm md:text-lg lg:text-xl">ミステリー / ADV</dd>
+                </div>
+                <div class="text-center">
+                  <dt class="text-sm sm:text-base md:text-xl lg:text-2xl font-semibold mb-2 sm:mb-3 text-gray-900">プレイ人数</dt>
+                  <dd class="text-gray-800 text-xs sm:text-sm md:text-lg lg:text-xl">1人</dd>
+                </div>
+                <div class="text-center">
+                  <dt class="text-sm sm:text-base md:text-xl lg:text-2xl font-semibold mb-2 sm:mb-3 text-gray-900">対応OS</dt>
+                  <dd class="text-gray-800 text-xs sm:text-sm md:text-lg lg:text-xl">Windows / Mac OS（予定）</dd>
+                </div>
+                <div class="text-center">
+                  <dt class="text-sm sm:text-base md:text-xl lg:text-2xl font-semibold mb-2 sm:mb-3 text-gray-900">言語</dt>
+                  <dd class="text-gray-800 text-xs sm:text-sm md:text-lg lg:text-xl">日本語/中国語</dd>
+                </div>
+                <div class="text-center">
+                  <dt class="text-sm sm:text-base md:text-xl lg:text-2xl font-semibold mb-2 sm:mb-3 text-gray-900">発売日</dt>
+                  <dd class="text-gray-800 text-xs sm:text-sm md:text-lg lg:text-xl">2026年(予定)</dd>
+                </div>
+                <div class="text-center">
+                  <dt class="text-sm sm:text-base md:text-xl lg:text-2xl font-semibold mb-2 sm:mb-3 text-gray-900">価格</dt>
+                  <dd class="text-gray-800 text-xs sm:text-sm md:text-lg lg:text-xl">800円(予定)</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- フッター（SNSリンク） -->
+    <footer class="py-12 border-t" style="background-image: url('/背景レンガ.png'); background-repeat: repeat; border-color: rgb(240, 185, 140);">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h3 class="text-2xl font-bold mb-6 text-gray-900">探偵と夜の街</h3>
+          <div class="flex justify-center gap-6 mb-8">
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-gray-700 hover:text-gray-900 transition text-2xl"
+              aria-label="Twitter"
+            >
+              <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+              </svg>
+            </a>
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-gray-700 hover:text-gray-900 transition text-2xl"
+              aria-label="YouTube"
+            >
+              <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+            </a>
+            <a
+              href="https://github.com/fujitasan-create"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-gray-700 hover:text-gray-900 transition text-2xl"
+              aria-label="GitHub"
+            >
+              <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
+            </a>
+          </div>
+          <p class="text-gray-700 text-sm">
+            © 2025 探偵と夜の街. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // モバイルメニューのトグル
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // メニューリンクをクリックしたら閉じる
+      const menuLinks = mobileMenu.querySelectorAll('a');
+      menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    }
+
+    // スムーススクロール
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+</BaseLayout>
